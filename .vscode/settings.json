@@ -2,5 +2,4 @@
   "deno.enablePaths": [
     "api"
   ],
-  "deno.enable": true
 }
