@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <h1>Test Site</h1>
+
+  <button onclick="hello()">Hello</button>
+
+  <div class="test_case_container">
+    <button onclick="make_a_fetch()">Fetch</button>
+    <button onclick="reset('a1')">Reset</button>
+    <div id="a1">Result</div>
+  </div>
+
+  <div class="test_case_container">
+    <button onclick="make_a_fetch_keepalive('#a2')">Fetch with keepalive</button>
+    <button onclick="reset('#a2')">Reset</button>
+    <div id="a2">Result</div>
+  </div>
+
+  <div class="test_case_container">
+    <p>fetch and then reload page</p>
+    <button onclick="make_a_fetch_keepalive_reload_page(false)">keepalive: false</button>
+    <button onclick="make_a_fetch_keepalive_reload_page(true)">keepalive: true</button>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
