@@ -51,7 +51,7 @@ const event_to_send = {
 };
 
 function make_a_fetch_keepalive_reload_page(keepalive) {
-  fetch("http://localhost:8000/keepalive/1", {
+  fetch("https://late-badger-69.deno.dev/keepalive/1", {
     keepalive,
     method: "POST",
     headers: {
