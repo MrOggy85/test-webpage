@@ -18,6 +18,9 @@ router
   })
   .post('/keepalive/:id', async (context) => {
     const id = context.params.id
+
+    const b = await context.request.body().value
+    console.log('POST body', b);
     await timeout(2000);
     count++
     console.log('count', count);
