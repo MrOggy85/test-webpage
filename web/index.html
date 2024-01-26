@@ -8,11 +8,13 @@
 <body>
   <h1>Test Site</h1>
 
-  <button onclick="hello()">Hello</button>
+  <div class="test_case_container">
+    <button onclick="hello()">Hello</button>
+  </div>
 
   <div class="test_case_container">
-    <button onclick="make_a_fetch()">Fetch</button>
-    <button onclick="reset('a1')">Reset</button>
+    <button onclick="make_a_fetch('#a1')">Fetch</button>
+    <button onclick="reset('#a1')">Reset</button>
     <div id="a1">Result</div>
   </div>
 

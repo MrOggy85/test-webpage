@@ -5,11 +5,11 @@ function hello() {
 const LINUX_README =
   "https://raw.githubusercontent.com/torvalds/linux/master/README";
 
-async function make_a_fetch() {
+async function make_a_fetch(id) {
   const r = await fetch(LINUX_README);
   console.log("ok", r.ok);
   const txt = await r.text();
-  document.querySelector("#a1").innerHTML = txt;
+  document.querySelector(id).innerHTML = txt;
 }
 
 async function make_a_fetch_keepalive(id) {
