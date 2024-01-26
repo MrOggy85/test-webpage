@@ -50,8 +50,14 @@ const event_to_send = {
   "client_timestamp": 1706081540806,
 };
 
+const LOCAL_API = "http://localhost:8000";
+const DEPLOYED_API = "https://late-badger-69.deno.dev";
+const BASE_URL = document.location.hostname === "localhost"
+  ? LOCAL_API
+  : DEPLOYED_API;
+
 function make_a_fetch_keepalive_reload_page(keepalive) {
-  fetch("https://late-badger-69.deno.dev/keepalive/1", {
+  fetch(`${BASE_URL}/keepalive/1`, {
     keepalive,
     method: "POST",
     headers: {
